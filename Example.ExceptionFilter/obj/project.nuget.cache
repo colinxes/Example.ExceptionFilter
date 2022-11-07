@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZnSyRT94pPzdUQS88/vlTZf/CFQ5SmBqxrKJNIfzxKZMfIhQLDjgft50zS6oKUzqmfjE7WS/X/8Jx5a8wv0bGQ==",
+  "dgSpecHash": "nGQLlS+3N5jCffpZGcSahd7VwFjKu9O2FSinb/rgIxOUYeP0Mp7ocMDXWIatDL38j6mNWHk+2ubzODyy3vUzjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\eikis-sagcob\\RiderProjects\\Excample.ExceptionFilter\\Example.ExceptionFilter\\Example.ExceptionFilter.csproj",
+  "projectFilePath": "C:\\Users\\eikis-sagcob\\RiderProjects\\Example.ExceptionFilter\\Example.ExceptionFilter\\Example.ExceptionFilter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eikis-sagcob\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
     "C:\\Users\\eikis-sagcob\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

@@ -524,11 +524,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eikis-sagcob\\RiderProjects\\Excample.ExceptionFilter\\Example.ExceptionFilter\\Example.ExceptionFilter.csproj",
+      "projectUniqueName": "C:\\Users\\eikis-sagcob\\RiderProjects\\Example.ExceptionFilter\\Example.ExceptionFilter\\Example.ExceptionFilter.csproj",
       "projectName": "Example.ExceptionFilter",
-      "projectPath": "C:\\Users\\eikis-sagcob\\RiderProjects\\Excample.ExceptionFilter\\Example.ExceptionFilter\\Example.ExceptionFilter.csproj",
+      "projectPath": "C:\\Users\\eikis-sagcob\\RiderProjects\\Example.ExceptionFilter\\Example.ExceptionFilter\\Example.ExceptionFilter.csproj",
       "packagesPath": "C:\\Users\\eikis-sagcob\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eikis-sagcob\\RiderProjects\\Excample.ExceptionFilter\\Example.ExceptionFilter\\obj\\",
+      "outputPath": "C:\\Users\\eikis-sagcob\\RiderProjects\\Example.ExceptionFilter\\Example.ExceptionFilter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
