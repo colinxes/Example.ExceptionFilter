@@ -8,16 +8,6 @@ namespace Excample.ExceptionFilter
         private readonly Logger _logger;
         private readonly ExceptionHandler _exceptionHandler;
 
-        private static IEnumerable<Type> HandableExceptionsTypes =>
-            new List<Type>
-            {
-                typeof(TimeoutException),
-                typeof(EntityCommandExecutionException),
-                typeof(EntityException),
-                typeof(ArgumentNullException),
-                typeof(SqlException)
-            };
-        
         public WithExceptionFilter()
         {
             _logger = new Logger();
@@ -26,40 +16,27 @@ namespace Excample.ExceptionFilter
 
         public void DoSomehting()
         {
-            bool errorOutOccured;
-            int timeoutCount = 0;
-
             try
             {
                 Console.WriteLine("Do something that may throw an Exception!");
                 throw new TimeoutException("Timeout!");
             }
-            catch (AggregateException aggregateException) when (aggregateException.InnerExceptions.Any(IsHandable))
+            catch (AggregateException aggregateException) when (aggregateException.InnerExceptions.Any(_exceptionHandler.IsHandable))
             {
-                errorOutOccured = true;
-                timeoutCount += 1;
-            
                 foreach (Exception exception in aggregateException.InnerExceptions) 
-                    _logger.Error($"Timeout while starting outbound orders (Count: {timeoutCount}).", exception);
+                    _logger.Error($"Timeout while doing something..", exception);
             }
-            catch (Exception exception) when (IsHandable(exception))
+            catch (Exception exception) when (_exceptionHandler.IsHandable(exception))
             {
-                errorOutOccured = _exceptionHandler.HandleError(exception);
+                _exceptionHandler.HandleError(exception);
             }
             catch (Exception exception)
             {
-                errorOutOccured = true;
-                timeoutCount += 1;
-                _logger.Error("Unknown error while transferring outbound orders.", exception);
+                _logger.Error("Unknown error while doing something.", exception);
             }
             
-            if(errorOutOccured)
-                Console.WriteLine($"Error! Timeout count: {timeoutCount}");
         }
         
-        private static  bool IsHandable(Exception pException)
-        {
-            return HandableExceptionsTypes.Contains(pException.GetType());
-        }
+        
     }
 }
